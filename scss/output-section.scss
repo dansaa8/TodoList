@@ -1,0 +1,8 @@
+.todo-wrapper {
+  &.completed {
+    p {
+      text-decoration: line-through; 
+      color: gray; 
+    }
+  }
+}

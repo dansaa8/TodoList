@@ -1,15 +1,35 @@
 body {
-
+  background-color: $main-color2;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
-
+  background-color: $main-color1;
+  width: 100%;
+  margin: 0px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
 }
 
 main {
-
+    max-width: 1120px;
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid $content-border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 footer {
-    
+  background-color: $main-color1;
+  height: 100px;
+  width: 100%;
 }
