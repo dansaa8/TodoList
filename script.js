@@ -24,29 +24,24 @@ function createTodo(todoText) {
   textElement.textContent = todoText;
   todoWrapper.appendChild(textElement);
 
-  createCompleteBtn(todoWrapper);
-  createDeleteBtn(todoWrapper);
+  attachCompleteOnClick(todoWrapper);
+  attachDeleteSpan(todoWrapper);
 
   return todoWrapper;
 }
 
-function createCompleteBtn(todo) {
-  const completeBtn = document.createElement('button');
-  completeBtn.textContent = 'Complete';
-
-  completeBtn.addEventListener('click', () => {
+function attachCompleteOnClick(todo) {
+  todo.addEventListener('click', () => {
     todo.classList.toggle('completed');
   });
-
-  todo.appendChild(completeBtn);
 }
 
-function createDeleteBtn(todo) {
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = 'Delete';
-  deleteBtn.addEventListener('click', () => {
+function attachDeleteSpan(todo) {
+  const deleteSpan = document.createElement('span');
+  deleteSpan.textContent = '🗑️';
+  deleteSpan.addEventListener('click', () => {
     todo.remove();
   });
 
-  todo.appendChild(deleteBtn);
+  todo.appendChild(deleteSpan);
 }

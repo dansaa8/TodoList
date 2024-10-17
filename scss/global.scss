@@ -1,35 +1,53 @@
+p,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: $main-color2;
   padding: 0px;
   margin: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 header {
   background-color: $main-color1;
   width: 100%;
   margin: 0px;
-  height: 100px;
-  margin: auto;
   text-align: center;
+  border-bottom: 4px solid $content-border-color1;
+
+  h1 {
+    padding: 25px;
+  }
 }
 
 main {
-    max-width: 1120px;
-    width: 100%;
-    min-height: 500px;
-    border: 1px solid $content-border-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  max-width: 1120px;
+  width: 100%;
+  border: 1px solid $content-border-color;
+  border-radius: $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Let main take up available space */
+  margin: 5px;
 }
 
 footer {
   background-color: $main-color1;
-  height: 100px;
   width: 100%;
+  margin: 0;
+  border-top: 4px solid $content-border-color1;
+  text-align: center;
+
+  p {
+    padding: 10px;
+  }
 }
